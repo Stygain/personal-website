@@ -38,7 +38,7 @@ function ImageContainer(props) {
     }
 
     .border {
-      transition: border 1s ease 0.5s;
+      transition: border 0.6s ease 0.4s;
 
       border: ${hover ? "3px solid rgb(157, 199, 217)" : "3px solid rgb(19, 92, 124)"};
       z-index: 4;
@@ -49,9 +49,9 @@ function ImageContainer(props) {
       left: 10px;
       z-index: 2;
 
-        transition: border 1s ease 0.25s;
+      transition: border 0.6s ease 0.2s;
 
-        border: ${hover ? "3px solid rgb(157, 199, 217)" : "3px solid rgb(19, 92, 124)"};
+      border: ${hover ? "3px solid rgb(157, 199, 217)" : "3px solid rgb(19, 92, 124)"};
     }
 
     .border-2 {
@@ -59,9 +59,9 @@ function ImageContainer(props) {
       left: 20px;
       z-index: 1;
 
-        transition: border 1s ease;
+      transition: border 0.6s ease;
 
-        border: ${hover ? "3px solid rgb(157, 199, 217)" : "3px solid rgb(19, 92, 124)"};
+      border: ${hover ? "3px solid rgb(157, 199, 217)" : "3px solid rgb(19, 92, 124)"};
     }
   `;
 

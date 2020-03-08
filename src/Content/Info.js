@@ -21,15 +21,29 @@ function Info(props) {
     .name-intro {
       font-family: 'Oxanium', monospace;
       font-size: 16px;
+      margin-bottom: -4px;
       color: rgb(144, 160, 167);
     }
 
     .name {
       font-family: 'Oxanium', monospace;
-      font-size: 72px;
+      ${'' /* font-size: 72px; */}
+      font-size: 8vw;
     }
 
-    .occupation-container {
+    .occupation-intro {
+      ${'' /* border: 1px solid red; */}
+
+      margin-top: -13px;
+      margin-bottom: -7px;
+      width: 70%;
+      text-align: right;
+      font-family: 'Oxanium', monospace;
+      font-size: 16px;
+      color: rgb(144, 160, 167);
+    }
+
+    ${'' /* .occupation-container {
       border: 1px solid red;
 
       width: 80%;
@@ -37,11 +51,12 @@ function Info(props) {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-    }
+    } */}
 
     .occupation {
       font-family: 'Oxanium', monospace;
-      font-size: 45px;
+      ${'' /* font-size: 45px; */}
+      font-size: 5vw;
       color: rgb(157, 199, 217);
     }
 
@@ -59,11 +74,10 @@ function Info(props) {
 
   return (
     <div css={styling}>
-      <h4 className="name-intro">Hi, I am</h4>
+      <h4 className="name-intro">Hi, my name is</h4>
       <h2 className="name">Adam Barton</h2>
-      {/* <div className="occupation-container"> */}
-        <h3 className="occupation">Software Engineer at <a href="https://www.carbonblack.com/">Carbon Black</a></h3>
-      {/* </div> */}
+      <h4 className="occupation-intro">and I am a</h4>
+      <h3 className="occupation">Software Engineer at <a href="https://www.carbonblack.com/">Carbon Black</a></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   );
