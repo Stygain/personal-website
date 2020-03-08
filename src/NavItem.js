@@ -29,7 +29,7 @@ function NavItem(props) {
     }
 
     .section-prefix {
-      color: ${hover ? "rgb(30, 212, 126)" : "rgb(19, 150, 88)"};
+      color: ${hover ? "rgb(14, 236, 131)" : "rgb(19, 150, 88)"};
       padding-right: 4px;
     }
 

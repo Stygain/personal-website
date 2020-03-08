@@ -15,7 +15,7 @@ function ExpandArrow(props) {
     border-top-right-radius: 80px;
 
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.85);
-    background-color: rgb(30, 255, 25);
+    background-color: rgb(14, 236, 131);
 
     cursor: pointer;
 
