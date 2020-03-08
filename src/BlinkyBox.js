@@ -35,7 +35,7 @@ function NavItem(props) {
     if (props.hover) {
       var intervalId = setInterval(
         () => blinky(),
-        750
+        500
       );
 
       return function cleanup () {

@@ -15,6 +15,8 @@ function NavItem(props) {
     flex-direction: row;
     align-items: flex-end;
 
+    margin: 0px 10px;
+
     h2 {
       ${'' /* border: 1px solid red; */}
 
@@ -53,7 +55,7 @@ function NavItem(props) {
         >
       </h2>
       <h2 className="section-title">
-        Section1
+        {props.content}
       </h2>
       {
         hover ?

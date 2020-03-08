@@ -33,6 +33,7 @@ function NavBar(props) {
       <h1 className="title">Adam Barton</h1>
       <div className="grower"></div>
       <NavItem content="Section1" />
+      <NavItem content="Section2" />
     </div>
   );
 }
