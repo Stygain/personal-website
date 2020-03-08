@@ -12,7 +12,7 @@ function SideBar(props) {
   const styling = css`
     ${'' /* border: 1px solid green; */}
 
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 0px;
 
