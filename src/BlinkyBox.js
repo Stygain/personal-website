@@ -25,16 +25,10 @@ function NavItem(props) {
     }
   `;
 
-  function blinky() {
-    setBlink(!blink);
-    // console.log("BLINK");
-    // console.log(blink)
-  };
-
   useEffect(() => {
     if (props.hover) {
       var intervalId = setInterval(
-        () => blinky(),
+        () => {setBlink(!blink);},
         500
       );
 

@@ -34,9 +34,7 @@ function SideBar(props) {
       box-shadow: inset 0 0 10px #000000;
       background-color: rgb(48, 48, 48);
 
-      ${'' /* TODO change ease */}
       transition: height 0.7s cubic-bezier(.52,0,.19,1.4);
-      ${'' /* transition: height 0.7s cubic-bezier(.81,.61,.85,1.37); */}
     }
 
     .expansion-container {

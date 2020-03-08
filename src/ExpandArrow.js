@@ -1,11 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { useState } from 'react';
 
 
 function ExpandArrow(props) {
-  // const [ hover, setHover ] = useState(false);
-
   const styling = css`
     ${'' /* border: 1px solid blue; */}
 
@@ -30,8 +27,7 @@ function ExpandArrow(props) {
       height: 7px;
       background-color: rgb(0, 0, 0);
 
-      ${'' /* TODO change ease */}
-      transition: transform 0.2s ease;
+      transition: transform 0.2s cubic-bezier(.64,-0.31,.49,1.2) 0.3s;
     }
 
     .arrow.arrow-left {

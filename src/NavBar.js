@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { useState } from 'react';
 
 import NavItem from './NavItem.js';
 
@@ -21,11 +20,6 @@ function NavBar(props) {
     .grower {
       flex-grow: 4;
     }
-
-    ${'' /* .title {
-      border: 1px solid blue;
-
-    } */}
   `;
 
   return (
