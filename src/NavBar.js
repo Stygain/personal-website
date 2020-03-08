@@ -11,7 +11,9 @@ function NavBar(props) {
     @import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap');
     font-family: 'Oxanium', monospace;
 
-    padding: 10px 5px;
+    ${'' /* border-bottom: 1px solid rgb(9, 62, 84); */}
+    box-shadow: 0px 3px 5px 0px rgba(4, 45, 62, 0.78);
+    padding: 15px 5px;
 
     display: flex;
     flex-direction: row;
@@ -19,6 +21,10 @@ function NavBar(props) {
 
     .grower {
       flex-grow: 4;
+    }
+
+    .title {
+      margin-left: 10px;
     }
   `;
 
