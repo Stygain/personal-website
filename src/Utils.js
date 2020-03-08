@@ -9,7 +9,7 @@ export function ContentMargin(props) {
     ${'' /* margin-left: 70px; */}
     margin-left: 20px;
 
-    max-width: 85%;
+    max-width: 95%;
   `;
 
   return (
