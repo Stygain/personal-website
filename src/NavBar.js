@@ -2,11 +2,18 @@
 import { jsx, css } from '@emotion/core';
 import { useState } from 'react';
 
+import NavItem from './NavItem.js';
+
 
 function NavBar(props) {
   const styling = css`
-    border: 1px solid green;
-    
+    ${'' /* border: 1px solid green; */}
+
+    @import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap');
+    font-family: 'Oxanium', monospace;
+
+    padding: 10px 5px;
+
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -15,20 +22,17 @@ function NavBar(props) {
       flex-grow: 4;
     }
 
-    .section-title {
-      border: 1px solid red;
+    ${'' /* .title {
+      border: 1px solid blue;
 
-      padding: 2px 4px;
-    }
+    } */}
   `;
 
   return (
     <div css={styling}>
-      <h1 className="title"><a href="/">Adam Barton</a></h1>
+      <h1 className="title">Adam Barton</h1>
       <div className="grower"></div>
-      <h2 className="section-title">Some Section1</h2>
-      <h2 className="section-title">Some Section2</h2>
-      <h2 className="section-title">Some Section3</h2>
+      <NavItem content="Section1" />
     </div>
   );
 }
