@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 
 function ExpandArrow(props) {
+  // const [ hover, setHover ] = useState(false);
+
   const styling = css`
     ${'' /* border: 1px solid blue; */}
 
@@ -51,10 +53,20 @@ function ExpandArrow(props) {
 
   return (
     <div css={styling} onClick={
-      () => {
-        props.setExpanded(!props.expanded);
+        () => {
+          props.setExpanded(!props.expanded);
+        }
       }
-    }>
+      onMouseEnter={
+        () => {
+          props.setHover(true);
+        }
+      }
+      onMouseLeave={
+        () => {
+          props.setHover(false);
+        }
+      }>
       <div className={props.expanded ? "arrow arrow-left expanded" : "arrow arrow-left"}></div>
       <div className={props.expanded ? "arrow arrow-right expanded" : "arrow arrow-right"}></div>
     </div>
