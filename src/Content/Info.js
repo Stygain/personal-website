@@ -6,7 +6,7 @@ function Info(props) {
   const styling = css`
     ${'' /* border: 1px solid green; */}
 
-    margin-top: 40px;
+    margin-top: 20vh;
 
     @import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');

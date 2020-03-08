@@ -16,6 +16,8 @@ function SideBar(props) {
     bottom: 0px;
     left: 0px;
 
+    z-index: 10;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +36,7 @@ function SideBar(props) {
       box-shadow: inset 0 0 10px #000000;
       background-color: rgb(48, 48, 48);
 
-      transition: height 0.7s cubic-bezier(.52,0,.19,1.4);
+      transition: ${hover ? "height 0.7s cubic-bezier(.52,0,.19,1.4)" : "height 0.7s cubic-bezier(.52,.01,.5,.98)"};
     }
 
     .expansion-container {
@@ -43,6 +45,8 @@ function SideBar(props) {
 
     .expansion-container.expanded {
       height: 125px;
+
+      transition: height 0.7s cubic-bezier(.52,0,.19,1.4);
     }
 
     .linkedin {

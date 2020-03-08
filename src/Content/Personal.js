@@ -3,14 +3,12 @@ import { jsx, css } from '@emotion/core';
 
 import ImageContainer from './ImageContainer.js';
 
-import ProfilePhoto from '../Images/IMG_0774-cut-crop.jpg';
-
 
 function Personal(props) {
   const styling = css`
     ${'' /* border: 1px solid green; */}
 
-    margin-top: 40px;
+    margin-top: 45vh;
 
     ${'' /* @import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap'); */}
     @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
@@ -55,12 +53,33 @@ function Personal(props) {
 
       background-color: rgba(4, 45, 62, 0.78);
     }
+
+    .personal.content-container {
+      border: 1px solid red;
+
+      margin-top: 10px;
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .about-text-container {
+      border: 1px solid green;
+
+      max-width: calc(100% - (38vw - 3px + 25px));
+    }
   `;
 
   return (
     <div css={styling}>
       <h1 className="section-header">About Me</h1>
-      <ImageContainer />
+      <div className="personal content-container">
+        <div className="about-text-container">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <ImageContainer />
+      </div>
     </div>
   );
 }

@@ -13,6 +13,7 @@ function ImageContainer(props) {
 
     width: calc(38vw - 3px + 25px);
     height: calc(((38vw - 3px) * 1.250723) + 25px);
+    flex-basis: calc(38vw - 3px + 25px);
 
     position: relative;
 

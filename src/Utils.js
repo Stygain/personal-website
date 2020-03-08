@@ -6,7 +6,8 @@ export function ContentMargin(props) {
     ${'' /* border: 1px solid red; */}
 
     position: relative;
-    margin-left: 70px;
+    ${'' /* margin-left: 70px; */}
+    margin-left: 20px;
 
     max-width: 85%;
   `;
