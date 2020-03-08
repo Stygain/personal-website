@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 
+import ImageContainer from './ImageContainer.js';
+
 import ProfilePhoto from '../Images/IMG_0774-cut-crop.jpg';
 
 
@@ -53,51 +55,12 @@ function Personal(props) {
 
       background-color: rgba(4, 45, 62, 0.78);
     }
-
-    .img-container {
-      position: relative;
-    }
-
-    img {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-
-      z-index: 3;
-
-      width: 38vw;
-      border-radius: 10px;
-    }
-
-    .img-border {
-      position: absolute;
-
-      width: calc(38vw - 3px);
-      height: calc((38vw - 3px) * 1.250723);
-
-      border-radius: 10px;
-      border: 3px solid rgba(255, 255, 255, 1);
-    }
-
-    .border-1 {
-      top: 10px;
-      left: 10px;
-    }
-
-    .border-2 {
-      top: 20px;
-      left: 20px;
-    }
   `;
 
   return (
     <div css={styling}>
       <h1 className="section-header">About Me</h1>
-      <div className="img-container">
-        <img src={ProfilePhoto} alt="Image of me" />
-        <div className="img-border border-1"></div>
-        <div className="img-border border-2"></div>
-      </div>
+      <ImageContainer />
     </div>
   );
 }
