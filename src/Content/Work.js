@@ -2,10 +2,9 @@
 import { jsx, css } from '@emotion/core';
 
 import SectionHeader from './SectionHeader.js';
-import ImageContainer from './ImageContainer.js';
 
 
-function Personal(props) {
+function Work(props) {
   const styling = css`
     ${'' /* border: 1px solid green; */}
 
@@ -18,35 +17,36 @@ function Personal(props) {
     display: flex;
     flex-direction: column;
 
-    .personal.content-container {
+    .work.content-container {
       border: 1px solid red;
-
-      margin-top: 10px;
 
       display: flex;
       flex-direction: row;
     }
 
-    .about-text-container {
+    .work .text-container {
       border: 1px solid green;
-
-      max-width: calc(100% - (38vw - 3px + 25px));
+      
+      margin: 0px;
     }
   `;
 
   return (
     <div css={styling}>
-      <SectionHeader content="About Me" margin="140" />
-      <div className="personal content-container">
-        <div className="about-text-container">
+      <SectionHeader content="Work" margin="75" />
+      <div className="work content-container">
+        <div className="link-container">
+          <h5>Link1</h5>
+          <h5>Link2</h5>
+        </div>
+        <div className="text-container">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <ImageContainer />
       </div>
     </div>
   );
 }
 
 
-export default Personal;
+export default Work;
