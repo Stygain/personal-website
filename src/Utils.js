@@ -10,6 +10,8 @@ export function ContentMargin(props) {
     margin-left: 20px;
 
     max-width: 95%;
+    
+    margin-bottom: 10vh;
   `;
 
   return (
