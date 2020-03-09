@@ -8,8 +8,9 @@ function LinkItem(props) {
 
     position: relative;
 
-    padding: 10px 20px;
-    padding-left: 25px;
+    width: calc(100% - 15px);
+    padding: 10px 0px;
+    padding-left: 15px;
 
     cursor: pointer;
 

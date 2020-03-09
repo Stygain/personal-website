@@ -16,6 +16,8 @@ function NavItem(props) {
     flex-direction: row;
     align-items: flex-end;
 
+    cursor: pointer;
+
     margin: 0px 10px;
 
     h2 {
