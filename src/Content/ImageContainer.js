@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core';
 import { useState } from 'react';
 
-import ProfilePhoto from '../Images/IMG_0774-cut-crop.jpg';
+import ProfilePhoto from '../Images/IMG_0774-cut-crop-reducedres.jpg';
 
 
 function ImageContainer(props) {
