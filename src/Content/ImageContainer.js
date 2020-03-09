@@ -13,7 +13,8 @@ function ImageContainer(props) {
 
     width: calc(38vw - 3px + 25px);
     height: calc(((38vw - 3px) * 1.250723) + 25px);
-    flex-basis: calc(38vw - 3px + 25px);
+    max-width: 497px;
+    max-height: calc((500px - 3px) * 1.250723);
 
     position: relative;
 
@@ -25,14 +26,17 @@ function ImageContainer(props) {
       z-index: 3;
 
       width: 38vw;
+      max-width: 500px;
       border-radius: 10px;
     }
 
     .img-border {
       position: absolute;
 
-      width: calc(38vw - 3px);
       height: calc((38vw - 3px) * 1.250723);
+      width: calc(38vw - 3px);
+      max-width: 497px;
+      max-height: calc((500px - 3px) * 1.250723);
 
       border-radius: 10px;
       border: 3px solid rgba(255, 255, 255, 1);
