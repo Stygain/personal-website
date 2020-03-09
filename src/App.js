@@ -1,22 +1,29 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
 
 import NavBar from './NavBar.js';
 import SideBar from './SideBar.js';
 import Info from './Content/Info.js';
 import Personal from './Content/Personal.js';
 import Work from './Content/Work.js';
-import { ContentMargin } from './Utils.js';
+import { Centering, ContentMargin } from './Utils.js';
 
 function App() {
+  const styling = css`
+    ${'' /* border: 1px solid green; */}
+  `;
+
   return (
-    <div className="App">
+    <div className="App" css={styling}>
       <NavBar />
       <SideBar />
-      <ContentMargin>
-        <Info />
-        <Personal />
-        <Work />
-      </ContentMargin>
+      <Centering>
+        <ContentMargin>
+          <Info />
+          <Personal />
+          <Work />
+        </ContentMargin>
+      </Centering>
     </div>
   );
 }
