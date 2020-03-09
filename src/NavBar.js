@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 
+import NavTitle from './NavTitle.js';
 import NavItem from './NavItem.js';
 
 
@@ -30,7 +31,7 @@ function NavBar(props) {
 
   return (
     <div css={styling}>
-      <h1 className="title">Adam Barton</h1>
+      <NavTitle />
       <div className="grower"></div>
       <NavItem content="Section1" />
       <NavItem content="Section2" />
