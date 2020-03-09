@@ -21,6 +21,7 @@ function NavTitle(props) {
       width: 0px;
       overflow: hidden;
       white-space: nowrap;
+      user-select: none;
 
       animation: type 1s linear forwards 0.6s;
     }

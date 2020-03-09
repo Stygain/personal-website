@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
+import { useState } from 'react';
 
 import SectionHeader from './SectionHeader.js';
 import LinkItem from './LinkItem.js';
+import WorkContent from './WorkContent.js';
 
 
 const WorkData = [
@@ -17,6 +19,8 @@ const WorkData = [
 ]
 
 function Work(props) {
+  const [ index, setIndex ] = useState(0);
+
   const styling = css`
     ${'' /* border: 1px solid green; */}
 
@@ -61,6 +65,8 @@ function Work(props) {
       font-size: 20px;
       color: rgb(157, 199, 217);
 
+      user-select: none;
+
       transition: color 0.3s ease;
     }
 
@@ -97,17 +103,18 @@ function Work(props) {
         <div className="work content-container">
           <div className="link-container">
             {
-              WorkData.map((item) => {
-                return (<LinkItem content={item.title} />);
+              WorkData.map((item, i) => {
+                return (<LinkItem
+                          index={index}
+                          setIndex={setIndex}
+                          id={i}
+                          key={i}
+                          content={item.title} />);
               })
             }
           </div>
           <div className="text-container">
-            {
-              WorkData.map((item) => {
-                return (<p>{item.description}</p>);
-              })
-            }
+            <WorkContent content={WorkData[index]} />
           </div>
         </div>
       </div>

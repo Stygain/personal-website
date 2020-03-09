@@ -25,6 +25,7 @@ function NavItem(props) {
       font-family: 'Ubuntu Mono', monospace;
 
       font-size: 20px;
+      user-select: none;
 
       transition: color 0.2s ease;
     }
