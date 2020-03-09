@@ -40,7 +40,7 @@ function Work(props) {
     }
 
     .work.content-container {
-      border: 1px solid red;
+      ${'' /* border: 1px solid red; */}
 
       width: 80%;
 
@@ -49,7 +49,7 @@ function Work(props) {
     }
 
     .work .text-container {
-      border: 1px solid green;
+      ${'' /* border: 1px solid green; */}
 
       margin: 0px;
     }
@@ -71,7 +71,7 @@ function Work(props) {
     }
 
     .link-box {
-      border: 1px solid green;
+      ${'' /* border: 1px solid green; */}
 
       padding: 10px 20px;
       padding-left: 25px;

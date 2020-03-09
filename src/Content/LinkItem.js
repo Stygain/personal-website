@@ -4,7 +4,9 @@ import { jsx, css } from '@emotion/core';
 
 function LinkItem(props) {
   const styling = css`
-    border: 1px solid green;
+    ${'' /* border: 1px solid green; */}
+
+    position: relative;
 
     padding: 10px 20px;
     padding-left: 25px;
@@ -29,6 +31,43 @@ function LinkItem(props) {
         color: rgb(14, 236, 131);
       }
     }
+
+    .indicator {
+      position: absolute;
+      ${'' /* top: 0px;
+      left: 0px; */}
+      width: 1.5px;
+      ${'' /* height: 20px; */}
+      height: 50%;
+
+      background-color: rgb(6, 144, 79);
+
+      transition: 0.2s ease;
+    }
+
+    .indicator.top {
+      top: 0px;
+      left: 0px;
+    }
+
+    .indicator.bot {
+      bottom: 0px;
+      left: 0px;
+    }
+
+    .indicator.top.active {
+      width: 6px;
+      background-color: rgb(14, 236, 131);
+      ${'' /* height: 53%;
+      transform: translateY(1px) translateX(5px) rotate(-30deg); */}
+    }
+
+    .indicator.bot.active {
+      width: 6px;
+      background-color: rgb(14, 236, 131);
+      ${'' /* height: 53%;
+      transform: translateY(-1px) translateX(5px) rotate(30deg); */}
+    }
   `;
 
   return (
@@ -37,6 +76,8 @@ function LinkItem(props) {
         props.setIndex(props.id);
       }
     }>
+      <div className={props.id === props.index ? "indicator top active" : "indicator top"}></div>
+      <div className={props.id === props.index ? "indicator bot active" : "indicator bot"}></div>
       <h5>{props.content}</h5>
     </div>
   );
