@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
+import { useState } from 'react';
 
 
 function NavTitle(props) {
@@ -29,6 +30,23 @@ function NavTitle(props) {
       height: 25px;
 
       background-color: rgba(255, 255, 255, 1);
+
+      animation: blink 0.5s alternate infinite 2s;
+    }
+
+    @keyframes blink {
+      0% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+      49% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+      50% {
+        background-color: rgba(255, 255, 255, 0);
+      }
+      100% {
+        background-color: rgba(255, 255, 255, 0);
+      }
     }
 
 

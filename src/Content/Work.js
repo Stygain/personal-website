@@ -2,7 +2,19 @@
 import { jsx, css } from '@emotion/core';
 
 import SectionHeader from './SectionHeader.js';
+import LinkItem from './LinkItem.js';
 
+
+const WorkData = [
+  {
+    title: "link1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    title: "link2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+]
 
 function Work(props) {
   const styling = css`
@@ -17,8 +29,16 @@ function Work(props) {
     display: flex;
     flex-direction: column;
 
+    .work-centerer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .work.content-container {
       border: 1px solid red;
+
+      width: 80%;
 
       display: flex;
       flex-direction: row;
@@ -64,23 +84,31 @@ function Work(props) {
         color: rgb(14, 236, 131);
       }
     }
+
+    p {
+      margin: 0px 30px;
+    }
   `;
 
   return (
     <div css={styling}>
       <SectionHeader content="Work" margin="75" />
-      <div className="work content-container">
-        <div className="link-container">
-          <div className="link-box">
-            <h5>Link1</h5>
+      <div className="work-centerer">
+        <div className="work content-container">
+          <div className="link-container">
+            {
+              WorkData.map((item) => {
+                return (<LinkItem content={item.title} />);
+              })
+            }
           </div>
-          <div className="link-box">
-            <h5>Link2</h5>
+          <div className="text-container">
+            {
+              WorkData.map((item) => {
+                return (<p>{item.description}</p>);
+              })
+            }
           </div>
-        </div>
-        <div className="text-container">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </div>
     </div>

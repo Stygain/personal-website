@@ -78,7 +78,7 @@ function Info(props) {
       <h2 className="name">Adam Barton</h2>
       <h4 className="occupation-intro">and I am a</h4>
       <h3 className="occupation">Software Engineer at <a href="https://www.carbonblack.com/">Carbon Black</a></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>I'm a software engineer from Portland, Oregon who enjoys building things of all kinds!</p>
     </div>
   );
 }

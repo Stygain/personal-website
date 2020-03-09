@@ -1,11 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { useState, useEffect } from 'react';
 
 
 function NavItem(props) {
-  const [ blink, setBlink ] = useState(true);
-
   const styling = css`
     ${'' /* border: 1px solid green; */}
 
@@ -18,29 +15,29 @@ function NavItem(props) {
       background-color: rgba(255, 0, 0, 0);
 
       transition: background-color 0.2s ease;
+
+      animation: ${props.hover ? "blink 0.5s alternate infinite" : ""};
     }
 
-    .blinky-box.color {
-      background-color: rgb(236, 236, 236);
+    @keyframes blink {
+      0% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+      49% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+      50% {
+        background-color: rgba(255, 255, 255, 0);
+      }
+      100% {
+        background-color: rgba(255, 255, 255, 0);
+      }
     }
   `;
 
-  useEffect(() => {
-    if (props.hover) {
-      var intervalId = setInterval(
-        () => {setBlink(!blink);},
-        500
-      );
-
-      return function cleanup () {
-        clearInterval(intervalId);
-      }
-    }
-  }, [props.hover, blink]);
-
   return (
     <div css={styling}>
-      <div className={blink ? "blinky-box color" : "blinky-box"}></div>
+      <div className="blinky-box"></div>
     </div>
   );
 }
