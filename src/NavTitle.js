@@ -125,8 +125,12 @@ function NavTitle(props) {
 
   return (
     <div css={styling}>
-      <h1 className="title">Adam Barton</h1>
-      <div className="block"></div>
+      <a href="#top">
+        <h1 className="title">Adam Barton</h1>
+      </a>
+      <a href="#top">
+        <div className="block"></div>
+      </a>
     </div>
   );
 }
