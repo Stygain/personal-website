@@ -13,7 +13,7 @@ function TechContent(props) {
     justify-content: center;
 
     h3 {
-      font-size: 18px;
+      font-size: 2.2vw;
 
       margin-right: 10px;
 
@@ -33,12 +33,25 @@ function TechContent(props) {
       flex-direction: row;
       align-items: baseline;
       justify-content: flex-start;
+      flex-wrap: wrap;
     }
 
     p {
       ${'' /* border: 1px solid red; */}
 
+      font-size: 2vw;
+
       margin: 0px 10px;
+    }
+
+    @media (min-width: 1300px) {
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 20px;
+      }
     }
   `;
 
@@ -48,7 +61,7 @@ function TechContent(props) {
       <div className="description-container">
         {
           props.content.techAndTools.map((item) => {
-            return(<p>-{item}</p>);
+            return(<p>{item}</p>);
           })
         }
       </div>

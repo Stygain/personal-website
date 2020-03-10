@@ -19,7 +19,7 @@ function LinkItem(props) {
     transition: background-color 0.2s ease;
 
     h5 {
-      font-size: 20px;
+      font-size: 3.2vw;
       color: rgb(157, 199, 217);
 
       transition: color 0.3s ease;
@@ -50,7 +50,23 @@ function LinkItem(props) {
       background-color: rgb(14, 236, 131);
     }
 
+    @media (min-width: 1300px) {
+      & {
+        padding: 15px 0px;
+        padding-left: 15px;
+      }
+
+      h5 {
+        font-size: 25px;
+      }
+    }
+
     @media (max-width: 800px) {
+      & {
+        padding: 10px 0px;
+        padding-left: 10px;
+      }
+
       .indicator {
         position: absolute;
         top: 0px;

@@ -8,19 +8,20 @@ function WorkContent(props) {
 
 
     h3 {
-      font-size: 28px;
+      font-size: 4.5vw;
+
       color: rgb(224, 246, 255);
     }
 
     h5 {
-      font-size: 20px;
+      font-size: 3vw;
       color: rgb(175, 211, 227);
 
       margin-left: 10px;
     }
 
     h5.location {
-      font-size: 16px;
+      font-size: 2vw;
       color: rgb(71, 126, 150);
 
       margin: 0;
@@ -55,6 +56,7 @@ function WorkContent(props) {
 
     .item-prefix {
       ${'' /* border: 1px solid red; */}
+      font-size: 2.5vw;
 
       ${'' /* color: ${hover ? "rgb(14, 236, 131)" : "rgb(19, 150, 88)"}; */}
       color: rgb(14, 236, 131);
@@ -66,6 +68,7 @@ function WorkContent(props) {
       ${'' /* border: 1px solid red; */}
 
       ${'' /* margin: 0px 30px; */}
+      font-size: 2.5vw;
       margin: 0;
     }
 
@@ -73,6 +76,28 @@ function WorkContent(props) {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+    }
+
+    @media (min-width: 1300px) {
+      h3 {
+        font-size: 32px;
+      }
+
+      h5 {
+        font-size: 24px;
+      }
+
+      h5.location {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .item-prefix {
+        font-size: 18px;
+      }
     }
   `;
 
