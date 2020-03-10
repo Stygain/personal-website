@@ -5,17 +5,6 @@ import NavTitle from './NavTitle.js';
 import NavItem from './NavItem.js';
 
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-70px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-
 function NavBar(props) {
   const styling = css`
     ${'' /* border: 1px solid green; */}
