@@ -8,13 +8,13 @@ function WorkContent(props) {
 
 
     h3 {
-      font-size: 4.5vw;
+      font-size: 4vw;
 
       color: rgb(224, 246, 255);
     }
 
     h5 {
-      font-size: 3vw;
+      font-size: 2.5vw;
       color: rgb(175, 211, 227);
 
       margin-left: 10px;
@@ -68,7 +68,7 @@ function WorkContent(props) {
       ${'' /* border: 1px solid red; */}
 
       ${'' /* margin: 0px 30px; */}
-      font-size: 2.5vw;
+      font-size: 2vw;
       margin: 0;
     }
 
@@ -97,6 +97,24 @@ function WorkContent(props) {
 
       .item-prefix {
         font-size: 18px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      h3 {
+        font-size: 4.5vw;
+      }
+
+      h5 {
+        font-size: 3vw;
+      }
+
+      h5.location {
+        font-size: 2.5vw;
+      }
+
+      p {
+        font-size: 2.5vw;
       }
     }
   `;

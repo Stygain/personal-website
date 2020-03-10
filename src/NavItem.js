@@ -55,15 +55,19 @@ function NavItem(props) {
           setHover(false);
         }
       }>
-      <h2 className="section-prefix">
-        >
-      </h2>
+      <a href={"#" + props.anchor}>
+        <h2 className="section-prefix">
+          >
+        </h2>
+      </a>
       <h2 className="section-title">
         <a href={"#" + props.anchor}>{props.content}</a>
       </h2>
       {
         hover ?
-        <BlinkyBox hover={hover}/>
+        <a href={"#" + props.anchor}>
+          <BlinkyBox hover={hover}/>
+        </a>
         :
         <>
         </>

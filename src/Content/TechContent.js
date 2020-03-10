@@ -13,7 +13,7 @@ function TechContent(props) {
     justify-content: center;
 
     h3 {
-      font-size: 2.2vw;
+      font-size: 2vw;
 
       margin-right: 10px;
 
@@ -39,7 +39,7 @@ function TechContent(props) {
     p {
       ${'' /* border: 1px solid red; */}
 
-      font-size: 2vw;
+      font-size: 1.8vw;
 
       margin: 0px 10px;
     }
@@ -51,6 +51,16 @@ function TechContent(props) {
 
       p {
         font-size: 20px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      h3 {
+        font-size: 2.2vw;
+      }
+
+      p {
+        font-size: 2vw;
       }
     }
   `;
