@@ -1,11 +1,15 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
+import { useState, useEffect } from 'react';
 
 import NavTitle from './NavTitle.js';
 import NavItem from './NavItem.js';
 
 
 function NavBar(props) {
+  const [ prevScrollPos, setPrevScrollPos ] = useState(null);
+  const [ showNavBar, setShowNavBar ] = useState(true);
+
   const styling = css`
     ${'' /* border: 1px solid green; */}
 
@@ -28,6 +32,10 @@ function NavBar(props) {
 
     transition: top 0.3s;
 
+    &.hide {
+      top: -70px;
+    }
+
     .grower {
       flex-grow: 4;
     }
@@ -37,8 +45,29 @@ function NavBar(props) {
     }
   `;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      var currentScrollPos = window.pageYOffset;
+      console.log(currentScrollPos);
+      if (prevScrollPos === null) {
+        setPrevScrollPos(currentScrollPos);
+      } else {
+        if (prevScrollPos > currentScrollPos) {
+          setShowNavBar(true);
+        } else {
+          setShowNavBar(false);
+        }
+        setPrevScrollPos(currentScrollPos);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return(() => window.removeEventListener("scroll", handleScroll));
+  })
+
   return (
-    <div css={styling}>
+    <div css={styling} className={showNavBar ? "navbar" : "navbar hide"}>
       <NavTitle id="home" />
       <div className="grower"></div>
       <NavItem content="About Me" anchor="about-me-anchor" />

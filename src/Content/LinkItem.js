@@ -42,7 +42,8 @@ function LinkItem(props) {
 
       background-color: rgb(6, 144, 79);
 
-      transition: height 0.2s ease;
+      transition: height 0.2s ease,
+                  width 0.2s ease;
     }
 
     .indicator.active {
