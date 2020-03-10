@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { useState } from 'react';
 
 import SectionHeader from './SectionHeader.js';
 import Project from './Project.js';
@@ -11,7 +10,7 @@ const ProjectData = [
     title: "CSS-Loaders",
     link: "https://stygain.github.io/css-loaders/",
     source: "https://github.com/Stygain/css-loaders",
-    description: <p className="project-description">Got an itch to watch some CSS animations? Check out my <a href="https://stygain.github.io/css-loaders/" target="_blank">CSS-Loaders website</a> with heavy inspiration from <a href="https://tobiasahlin.com/spinkit/" target="_blank">Tobias Ahlin's Spinkit.</a></p>,
+    description: <p className="project-description">Got an itch to watch some CSS animations? Check out my <a href="https://stygain.github.io/css-loaders/" target="_blank" rel="noopener noreferrer">CSS-Loaders website</a> with heavy inspiration from <a href="https://tobiasahlin.com/spinkit/" target="_blank" rel="noopener noreferrer">Tobias Ahlin's Spinkit.</a></p>,
     technologies: [
       "React",
       "CSS",
@@ -50,8 +49,6 @@ const ProjectData = [
 ]
 
 function Projects(props) {
-  const [ index, setIndex ] = useState(0);
-
   const styling = css`
     ${'' /* border: 1px solid green; */}
 

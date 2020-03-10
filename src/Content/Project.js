@@ -1,17 +1,14 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 //eslint-disable-next-line
-import React, { useState } from 'react';
+import React from 'react';
 
-import SectionHeader from './SectionHeader.js';
 import ProjectTechContent from './ProjectTechContent.js';
 
 import ExternalLink from '../Images/ext-link.png';
 
 
 function Project(props) {
-  const [ index, setIndex ] = useState(0);
-
   const styling = css`
     ${'' /* border: 1px solid orange; */}
 
@@ -161,7 +158,7 @@ function Project(props) {
   return (
     <div css={styling}>
       <div className="project-content">
-        {props.content.link !== null ? <a className="ext-link" href={props.content.link} target="_blank"><img className="ext-img" src={ExternalLink} alt="External link" /></a> : <></>}
+        {props.content.link !== null ? <a className="ext-link" href={props.content.link} target="_blank" rel="noopener noreferrer"><img className="ext-img" src={ExternalLink} alt="External link" /></a> : <></>}
         <div className="project-text-content">
           <div className="title-content-wrap">
             <h2>{props.content.title}</h2>
