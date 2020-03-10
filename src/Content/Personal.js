@@ -46,7 +46,7 @@ function Personal(props) {
   `;
 
   return (
-    <div css={styling}>
+    <div css={styling} id="about-me-anchor">
       <SectionHeader content="About Me" margin="140" />
       <div className="personal content-container">
         <div className="about-text-container">

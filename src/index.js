@@ -12,6 +12,10 @@ const globalStyles = css`
     background-color: rgb(0, 58, 83);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   a {
     text-decoration: none;
     color: rgb(255, 255, 255);

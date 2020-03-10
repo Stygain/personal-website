@@ -59,7 +59,7 @@ function NavItem(props) {
         >
       </h2>
       <h2 className="section-title">
-        {props.content}
+        <a href={"#" + props.anchor}>{props.content}</a>
       </h2>
       {
         hover ?

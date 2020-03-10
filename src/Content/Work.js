@@ -169,7 +169,7 @@ function Work(props) {
   `;
 
   return (
-    <div css={styling}>
+    <div css={styling} id="work-anchor">
       <SectionHeader content="Work" margin="75" />
       <div className="work-centerer">
         <div className="work content-container">

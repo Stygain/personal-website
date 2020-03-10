@@ -33,8 +33,8 @@ function NavBar(props) {
     <div css={styling}>
       <NavTitle />
       <div className="grower"></div>
-      <NavItem content="Section1" />
-      <NavItem content="Section2" />
+      <NavItem content="About Me" anchor="about-me-anchor" />
+      <NavItem content="Work" anchor="work-anchor" />
     </div>
   );
 }
