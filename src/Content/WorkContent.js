@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core';
 
 
-function Work(props) {
+function WorkContent(props) {
   const styling = css`
     ${'' /* border: 1px solid blue; */}
 
@@ -17,6 +17,14 @@ function Work(props) {
       color: rgb(175, 211, 227);
 
       margin-left: 10px;
+    }
+
+    h5.location {
+      font-size: 16px;
+      color: rgb(71, 126, 150);
+
+      margin: 0;
+      margin-right: 10px;
     }
 
     a {
@@ -60,12 +68,21 @@ function Work(props) {
       ${'' /* margin: 0px 30px; */}
       margin: 0;
     }
+
+    .date-location-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   `;
 
   return (
     <div css={styling}>
       <h3>{props.content.position} at <a href={props.content.companylink}>{props.content.company}</a></h3>
-      <h5>{props.content.start} - {props.content.end}</h5>
+      <div className="date-location-container">
+        <h5>{props.content.start} - {props.content.end}</h5>
+        <h5 className="location">{props.content.location}</h5>
+      </div>
       <div className="description-container">
         {
           props.content.description.map((item) => {
@@ -84,4 +101,4 @@ function Work(props) {
 }
 
 
-export default Work;
+export default WorkContent;
