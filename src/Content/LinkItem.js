@@ -35,39 +35,41 @@ function LinkItem(props) {
 
     .indicator {
       position: absolute;
-      ${'' /* top: 0px;
-      left: 0px; */}
+      top: 0px;
+      left: 0px;
       width: 1.5px;
-      ${'' /* height: 20px; */}
-      height: 50%;
+      height: 100%;
 
       background-color: rgb(6, 144, 79);
 
-      transition: 0.2s ease;
+      transition: height 0.2s ease;
     }
 
-    .indicator.top {
-      top: 0px;
-      left: 0px;
-    }
-
-    .indicator.bot {
-      bottom: 0px;
-      left: 0px;
-    }
-
-    .indicator.top.active {
+    .indicator.active {
       width: 6px;
       background-color: rgb(14, 236, 131);
-      ${'' /* height: 53%;
-      transform: translateY(1px) translateX(5px) rotate(-30deg); */}
     }
 
-    .indicator.bot.active {
-      width: 6px;
-      background-color: rgb(14, 236, 131);
-      ${'' /* height: 53%;
-      transform: translateY(-1px) translateX(5px) rotate(30deg); */}
+    @media (max-width: 800px) {
+      .indicator {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        ${'' /* width: 1.5px; */}
+        ${'' /* height: 100%; */}
+        width: 100%;
+        height: 1.5px;
+
+        background-color: rgb(6, 144, 79);
+
+        transition: 0.2s ease;
+      }
+
+      .indicator.active {
+        width: 100%;
+        height: 6px;
+        background-color: rgb(14, 236, 131);
+      }
     }
   `;
 
@@ -77,8 +79,8 @@ function LinkItem(props) {
         props.setIndex(props.id);
       }
     }>
-      <div className={props.id === props.index ? "indicator top active" : "indicator top"}></div>
-      <div className={props.id === props.index ? "indicator bot active" : "indicator bot"}></div>
+      <div className={props.id === props.index ? "indicator active" : "indicator"}></div>
+      {/* <div className={props.id === props.index ? "indicator bot active" : "indicator bot"}></div> */}
       <h5>{props.content}</h5>
     </div>
   );

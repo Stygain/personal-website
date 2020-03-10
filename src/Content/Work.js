@@ -101,15 +101,9 @@ function Work(props) {
 
       width: 95%;
       ${'' /* height: 390px; */}
-      height: 40vw;
+      height: 51vw;
 
       position: relative;
-    }
-
-    @media (min-width: 1300px) {
-      .work.content-container {
-        height: 21vw;
-      }
     }
 
     .work .text-container {
@@ -165,6 +159,37 @@ function Work(props) {
 
     p {
       margin: 0px 30px;
+    }
+
+    @media (min-width: 1300px) {
+      .work.content-container {
+        height: 21vw;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .work.content-container {
+        height: 69vw;
+      }
+
+      .link-container {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .work .text-container {
+        position: absolute;
+        right: 0px;
+        top: 60px;
+        width: 100%;
+      }
     }
   `;
 
