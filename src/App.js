@@ -6,6 +6,7 @@ import SideBar from './SideBar.js';
 import Info from './Content/Info.js';
 import Personal from './Content/Personal.js';
 import Work from './Content/Work.js';
+import Projects from './Content/Projects.js';
 import { Centering, ContentMargin } from './Utils.js';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Info />
           <Personal />
           <Work />
+          <Projects />
         </ContentMargin>
       </Centering>
     </div>

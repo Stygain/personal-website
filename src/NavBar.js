@@ -72,6 +72,7 @@ function NavBar(props) {
       <div className="grower"></div>
       <NavItem content="About Me" anchor="about-me-anchor" />
       <NavItem content="Work" anchor="work-anchor" />
+      <NavItem content="Projects" anchor="projects-anchor" />
     </div>
   );
 }
