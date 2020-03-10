@@ -48,7 +48,7 @@ function NavBar(props) {
   useEffect(() => {
     const handleScroll = () => {
       var currentScrollPos = window.pageYOffset;
-      console.log(currentScrollPos);
+      // console.log(currentScrollPos);
       if (prevScrollPos === null) {
         setPrevScrollPos(currentScrollPos);
       } else {
