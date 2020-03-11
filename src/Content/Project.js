@@ -4,6 +4,7 @@ import { jsx, css } from '@emotion/core';
 import React from 'react';
 
 import ProjectTechContent from './ProjectTechContent.js';
+import SourceButton from './SourceButton.js';
 
 import ExternalLink from '../Images/ext-link.png';
 
@@ -166,9 +167,7 @@ function Project(props) {
           </div>
           <ProjectTechContent content={props.content.technologies} />
         </div>
-        <div className="source-code-button-container">
-          <a className="source-code-button" href={props.content.source}>&#60;Source /&#62;</a>
-        </div>
+        <SourceButton source={props.content.source} />
       </div>
     </div>
   );
