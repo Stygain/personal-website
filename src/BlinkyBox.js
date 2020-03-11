@@ -33,6 +33,13 @@ function NavItem(props) {
         background-color: rgba(255, 255, 255, 0);
       }
     }
+
+    @media (max-width: 800px) {
+      .blinky-box {
+        width: 12px;
+        height: 22px;
+      }
+    }
   `;
 
   return (

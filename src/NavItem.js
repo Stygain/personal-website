@@ -20,6 +20,9 @@ function NavItem(props) {
 
     margin: 0px 10px;
 
+    ${'' /* transition: all 0.2s ease; */}
+
+
     h2 {
       ${'' /* border: 1px solid red; */}
 
@@ -27,6 +30,7 @@ function NavItem(props) {
       font-family: 'Ubuntu Mono', monospace;
 
       font-size: 20px;
+      white-space: nowrap;
       user-select: none;
 
       transition: color 0.2s ease;
@@ -40,6 +44,16 @@ function NavItem(props) {
     .section-title {
       color: ${hover ? "rgb(236, 236, 236)" : "rgb(201, 201, 201)"};
       padding-right: ${hover ? "2px" : "10px"};
+    }
+
+    @media (max-width: 800px) {
+      margin: 10px 10px;
+      padding: 15px 10px;
+
+      .section-title {
+        font-size: 28px;
+        padding-right: ${hover ? "4px" : "16px"};
+      }
     }
   `;
 
