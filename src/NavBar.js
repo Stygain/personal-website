@@ -79,6 +79,7 @@ function NavBar(props) {
       width: 100%;
       ${'' /* width: 0; */}
       opacity: 0%;
+      display: none;
 
       z-index: 1;
 
@@ -89,6 +90,7 @@ function NavBar(props) {
 
     .background.show {
       opacity: 100%;
+      display: block;
     }
 
     .grower {

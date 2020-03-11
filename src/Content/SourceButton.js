@@ -56,7 +56,7 @@ function SourceButton(props) {
 
       background: rgb(14, 236, 131);
 
-      transition: all .5s ease-in-out;
+      transition: all .3s ease-in-out;
       transform: translateX(-98%) translateY(-25%) rotate(45deg);
     }
 
