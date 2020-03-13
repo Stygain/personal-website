@@ -112,21 +112,12 @@ function NavBar(props) {
       ${'' /* border: 1px solid red; */}
 
       width: 100%;
-      opacity: 0%;
       ${'' /* height: 250px; */}
 
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-
-      transition: opacity 0.2s ease;
-    }
-
-    .button-container.show {
-      opacity: 100%;
-
-      transition: opacity 0.1s ease 0.1s;
     }
 
     .btn {
@@ -136,6 +127,7 @@ function NavBar(props) {
 
       display: block;
       padding: 12px 35px;
+      ${'' /* margin: 0 auto; */}
       margin: 14px 0px;
 
       position: relative;
@@ -172,18 +164,19 @@ function NavBar(props) {
       background: rgb(14, 236, 131);
 
       transition: all .3s ease-in-out;
+      ${'' /* transform: translateX(-98%) translateY(-25%) rotate(45deg); */}
     }
 
     .btn:hover {
       color: rgb(88, 88, 88);
     }
 
-    .btn.btn1.show {
+    .btn.btn1 {
       opacity: 0%;
       animation: fade-in 0.5s ease 0.3s forwards;
     }
 
-    .btn.btn2.show {
+    .btn.btn2 {
       opacity: 0%;
       animation: fade-in 0.5s ease 0.5s forwards;
     }
@@ -288,14 +281,18 @@ function NavBar(props) {
         <NavItem content="About Me" anchor="about-me-anchor" />
         <NavItem content="Work" anchor="work-anchor" />
         <NavItem content="Projects" anchor="projects-anchor" />
-        <div className={compressorShow ? "button-container show" : "button-container"}>
-          <form action="https://stygain.github.io/northwestvision/" target="_blank">
-            <button class={compressorShow ? "btn btn1 show" : "btn btn1"}><span>Northwest Vision</span></button>
-          </form>
-          <form action="https://stygain.github.io/css-loaders/" target="_blank">
-            <button class={compressorShow ? "btn btn2 show" : "btn btn2"}><span>CSS Loaders</span></button>
-          </form>
-        </div>
+        {compressorShow ?
+          <div className="button-container">
+            <form action="https://stygain.github.io/northwestvision/" target="_blank">
+              <button class="btn btn1"><span>Northwest Vision</span></button>
+            </form>
+            <form action="https://stygain.github.io/css-loaders/" target="_blank">
+              <button class="btn btn2"><span>CSS Loaders</span></button>
+            </form>
+          </div>
+        :
+          <div></div>
+        }
       </div>
     </div>
   );

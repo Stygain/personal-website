@@ -101,6 +101,8 @@ function WorkContent(props) {
     }
 
     @media (max-width: 800px) {
+      margin-top: 20px;
+
       h3 {
         font-size: 4.5vw;
       }
