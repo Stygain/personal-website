@@ -3,10 +3,18 @@ import { jsx, css } from '@emotion/core';
 //eslint-disable-next-line
 import React, { useState } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { setCompressorShow } from './Redux/actions.js';
+import { getCompressorShow } from './Redux/selectors.js';
+
 import BlinkyBox from './BlinkyBox.js';
 
 
 function NavItem(props) {
+  const dispatch = useDispatch();
+
+  const compressorShow = useSelector(getCompressorShow);
+
   const [ hover, setHover ] = useState(false);
 
   const styling = css`
@@ -57,6 +65,10 @@ function NavItem(props) {
     }
   `;
 
+  function handleClick(e) {
+    dispatch(setCompressorShow(false));
+  }
+
   return (
     <div css={styling}
       onMouseEnter={
@@ -69,17 +81,22 @@ function NavItem(props) {
           setHover(false);
         }
       }>
-      <a href={"#" + props.anchor}>
+      <a href={"#" + props.anchor}
+        onClick={handleClick}>
         <h2 className="section-prefix">
           >
         </h2>
       </a>
-      <h2 className="section-title">
-        <a href={"#" + props.anchor}>{props.content}</a>
-      </h2>
+      <a href={"#" + props.anchor}
+        onClick={handleClick}>
+        <h2 className="section-title">
+          {props.content}
+        </h2>
+      </a>
       {
         hover ?
-        <a href={"#" + props.anchor}>
+        <a href={"#" + props.anchor}
+          onClick={handleClick}>
           <BlinkyBox hover={hover}/>
         </a>
         :
