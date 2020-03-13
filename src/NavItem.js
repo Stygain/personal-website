@@ -3,17 +3,14 @@ import { jsx, css } from '@emotion/core';
 //eslint-disable-next-line
 import React, { useState } from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setCompressorShow } from './Redux/actions.js';
-import { getCompressorShow } from './Redux/selectors.js';
 
 import BlinkyBox from './BlinkyBox.js';
 
 
 function NavItem(props) {
   const dispatch = useDispatch();
-
-  const compressorShow = useSelector(getCompressorShow);
 
   const [ hover, setHover ] = useState(false);
 

@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core';
 import { useState, useEffect } from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { setCompressorShow } from './Redux/actions.js';
 import { getCompressorShow } from './Redux/selectors.js';
 
@@ -12,8 +12,6 @@ import ArrowButton from './ArrowButton.js';
 
 
 function NavBar(props) {
-  const dispatch = useDispatch();
-
   const compressorShow = useSelector(getCompressorShow);
 
   const [ prevScrollPos, setPrevScrollPos ] = useState(null);
