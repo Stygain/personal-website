@@ -2,16 +2,22 @@
 import { jsx, css } from '@emotion/core';
 import { useState, useEffect } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { setCompressorShow } from './Redux/actions.js';
+import { getCompressorShow } from './Redux/selectors.js';
+
 import NavTitle from './NavTitle.js';
 import NavItem from './NavItem.js';
 import ArrowButton from './ArrowButton.js';
 
 
 function NavBar(props) {
+  const dispatch = useDispatch();
+
+  const compressorShow = useSelector(getCompressorShow);
+
   const [ prevScrollPos, setPrevScrollPos ] = useState(null);
   const [ showNavBar, setShowNavBar ] = useState(true);
-
-  const [ showCompressor, setShowCompressor ] = useState(true);
 
   const styling = css`
     ${'' /* border: 1px solid green; */}
@@ -65,7 +71,7 @@ function NavBar(props) {
 
       overflow-y: scroll;
 
-      transition: all 0.8s ease;
+      transition: all 0.5s ease;
     }
 
     .background {
@@ -85,7 +91,7 @@ function NavBar(props) {
 
       background-color: rgba(0, 0, 0, 0.16);
 
-      transition: opacity 0.5s ease 0.3s;
+      transition: opacity 0.3s ease 0.2s;
     }
 
     .background.show {
@@ -94,7 +100,7 @@ function NavBar(props) {
     }
 
     .grower {
-      border: 1px solid green;
+      ${'' /* border: 1px solid green; */}
 
       flex-grow: 4;
     }
@@ -103,7 +109,101 @@ function NavBar(props) {
       margin-left: 10px;
     }
 
-    @media (min-width: 800px) {
+
+    .button-container {
+      ${'' /* border: 1px solid red; */}
+
+      width: 100%;
+      ${'' /* height: 250px; */}
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 1px;
+      outline: none;
+
+      display: block;
+      padding: 12px 35px;
+      ${'' /* margin: 0 auto; */}
+      margin: 14px 0px;
+
+      position: relative;
+
+      text-align: center;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: 700;
+      background-color: rgb(6, 66, 111);
+      overflow: hidden;
+
+      cursor: pointer;
+
+      transition: color 0.5s ease 0.15s;
+
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn:after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 420%;
+      width: 140%;
+
+      background: rgb(14, 236, 131);
+
+      transition: all .3s ease-in-out;
+      ${'' /* transform: translateX(-98%) translateY(-25%) rotate(45deg); */}
+    }
+
+    .btn:hover {
+      color: rgb(88, 88, 88);
+    }
+
+    .btn.btn1 {
+      opacity: 0%;
+      animation: fade-in 0.5s ease 0.3s forwards;
+    }
+
+    .btn.btn2 {
+      opacity: 0%;
+      animation: fade-in 0.5s ease 0.5s forwards;
+    }
+
+    .btn.btn1:after {
+      height: 520%;
+      width: 140%;
+      transform: translateX(-90%) translateY(-25%) rotate(45deg);
+    }
+
+    .btn.btn2:after {
+      ${'' /* height: 440%; */}
+      width: 130%;
+      transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    }
+
+    .btn.btn1:hover:after {
+      transform: translateX(-2%) translateY(-25%) rotate(45deg);
+    }
+
+    .btn.btn2:hover:after {
+      transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    }
+
+    @media (min-width: 801px) {
       .arrow-container {
         display: none;
       }
@@ -125,7 +225,7 @@ function NavBar(props) {
 
       .compressor.show {
         ${'' /* top: 70px; */}
-        padding-top: 100px;
+        padding-top: 70px;
 
         width: 50%;
       }
@@ -134,11 +234,21 @@ function NavBar(props) {
         flex-grow: 0;
       }
     }
+
+
+    @keyframes fade-in {
+      from {
+        opacity: 0%;
+      }
+      to {
+        opacity: 100%;
+      }
+    }
   `;
 
   useEffect(() => {
     const handleScroll = () => {
-      if (showCompressor) {
+      if (compressorShow) {
         setShowNavBar(true);
         return;
       }
@@ -164,15 +274,27 @@ function NavBar(props) {
   return (
     <div css={styling} className={showNavBar ? "navbar" : "navbar hide"}>
       <NavTitle id="home" />
-      <div className={showCompressor ? "arrow-container show" : "arrow-container"}>
-        <ArrowButton action={showCompressor} setAction={setShowCompressor} />
+      <div className={compressorShow ? "arrow-container show" : "arrow-container"}>
+        <ArrowButton action={compressorShow} setAction={setCompressorShow} />
       </div>
-      <div className={showCompressor ? "background show" : "background"}></div>
-      <div className={showCompressor ? "compressor show" : "compressor"}>
+      <div className={compressorShow ? "background show" : "background"}></div>
+      <div className={compressorShow ? "compressor show" : "compressor"}>
         <div className="grower"></div>
         <NavItem content="About Me" anchor="about-me-anchor" />
         <NavItem content="Work" anchor="work-anchor" />
         <NavItem content="Projects" anchor="projects-anchor" />
+        {compressorShow ?
+          <div className="button-container">
+            <form action="https://stygain.github.io/northwestvision/" target="_blank">
+              <button class="btn btn1"><span>Northwest Vision</span></button>
+            </form>
+            <form action="https://stygain.github.io/css-loaders/" target="_blank">
+              <button class="btn btn2"><span>CSS Loaders</span></button>
+            </form>
+          </div>
+        :
+          <div></div>
+        }
       </div>
     </div>
   );

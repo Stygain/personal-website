@@ -1,7 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 
+import { useDispatch, useSelector } from 'react-redux';
+
 function ArrowButton(props) {
+  const dispatch = useDispatch();
+
   const styling = css`
     ${'' /* border: 1px solid orange; */}
 
@@ -39,7 +43,7 @@ function ArrowButton(props) {
 
   return (
     <div css={styling} className={props.action ? "open" : ""} onClick={() => {
-      props.setAction(!props.action);
+      dispatch(props.setAction(!props.action));
     }}>
       <div className={props.action ? "bar1 open" : "bar1"}></div>
       <div className={props.action ? "bar2 open" : "bar2"}></div>

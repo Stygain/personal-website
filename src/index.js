@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx, Global, css } from '@emotion/core';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
 import App from './App.js';
+import store from './Redux/store.js';
 
 
 const globalStyles = css`
@@ -28,7 +30,7 @@ const globalStyles = css`
 `;
 
 ReactDOM.render(
-  <div>
+  <Provider store={store}>
     <Global styles={globalStyles} />
     <App />
-  </div>, document.getElementById('root'));
+  </Provider>, document.getElementById('root'));
