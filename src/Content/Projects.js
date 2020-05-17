@@ -7,6 +7,17 @@ import Project from './Project.js';
 
 const ProjectData = [
   {
+    title: "Bandwidth Monitor",
+    link: null,
+    source: "https://github.com/Stygain/bandwidth-monitor",
+    description: <p className="project-description">I had always wondered how full screen terminal applications were created. Being a commandline lover, when I discovered ncurses I just had to come up with a project to implement. I came up with this high-level network monitoring terminal application for Linux! Check out some gifs on GitHub.</p>,
+    technologies: [
+      "ncurses",
+      "c++",
+      "sysfs",
+    ]
+  },
+  {
     title: "CSS-Loaders",
     link: "https://stygain.github.io/css-loaders/",
     source: "https://github.com/Stygain/css-loaders",
