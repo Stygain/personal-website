@@ -21,7 +21,7 @@ const ProjectData = [
     title: "CSS-Loaders",
     link: "https://stygain.github.io/css-loaders/",
     source: "https://github.com/Stygain/css-loaders",
-    description: <p className="project-description">Got an itch to watch some CSS animations? Check out my <a href="https://stygain.github.io/css-loaders/" target="_blank" rel="noopener noreferrer">CSS-Loaders website</a> with heavy inspiration from <a href="https://tobiasahlin.com/spinkit/" target="_blank" rel="noopener noreferrer">Tobias Ahlin's Spinkit.</a></p>,
+    description: <p className="project-description">Got an itch to watch some CSS animations? Check out my <a href="https://stygain.github.io/css-loaders/" target="_blank" rel="noopener noreferrer">CSS-Loaders website</a> with heavy inspiration from <a href="https://tobiasahlin.com/spinkit/" target="_blank" rel="noopener noreferrer">Tobias Ahlin's Spinkit.</a> I love watching loading animations (when the loading animation is nice), so it was fun to create some of my own.</p>,
     technologies: [
       "React",
       "CSS",
@@ -31,17 +31,17 @@ const ProjectData = [
     title: "Northwest Vision",
     link: "https://stygain.github.io/northwestvision/",
     source: "https://github.com/Stygain/northwestvision",
-    description: <p className="project-description">Just because you aren't a web developer doesn't mean you can't do some web development on the side :) I enjoy taking pictures on the side too. Check out some photos from my various trips.</p>,
+    description: <p className="project-description">Just because you aren't a web developer doesn't mean you can't do some web development on the side :) I enjoy taking pictures on the side too. Check out some photos from my various trips. This is the third re-creation of this website (and I used React this time), check out <a href="https://github.com/Stygain/NVWebsite/" target="_blank" rel="noopener noreferrer">GitHub/NVWebsite</a> for my second iteration which used Handlebars.</p>,
     technologies: [
       "React",
       "Photography",
     ]
   },
   {
-    title: "Software-Defined Load-Balanced Network",
+    title: "Load-Balanced Network",
     link: null,
     source: "https://github.com/Stygain/virtualizing-gridlock-throughput-opinion",
-    description: <p className="project-description">A research project I implemented (along with one other student) to create a load balanced network and use it to compare various algorithms used.</p>,
+    description: <p className="project-description">A research project for a networking course. Initial implementations of our SDN used Mininet hence why Python was selected for the language. After frustrations with Mininet, we dropped Mininet and built our own network. Our network was used to compare different load balancing algorithms such as a priority-based weighted least-connections algorithm.</p>,
     technologies: [
       "Python",
       "Load Balancing",
@@ -51,7 +51,7 @@ const ProjectData = [
     title: "Fan-Controller",
     link: null,
     source: "https://github.com/Stygain/fan-controller",
-    description: <p className="project-description">A side-project I implemented for my own desktop computer. I was annoyed by the sound of my fans and figured it would be a good learning experience to touch some hardware. I created a fan controller using an Arduino which displayed temperatures and an RSS feed and enabled fan controll from an IR remote and a Windows-Forms app.</p>,
+    description: <p className="project-description">A side-project I implemented for my own desktop computer. I was annoyed by the sound of my fans and figured it would be a good learning experience to touch some hardware. I created a fan controller using an Arduino which displayed temperatures and an RSS feed and enabled fan control via an IR remote and a Windows-Forms app connected via a serial bus.</p>,
     technologies: [
       "Python",
       "Load Balancing",
