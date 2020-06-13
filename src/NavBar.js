@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { useState, useEffect } from 'react';
+// eslint-disable-next-line
+import React, { useState, useEffect } from 'react';
 
 import { useSelector } from 'react-redux';
 import { setCompressorShow } from './Redux/actions.js';
@@ -58,6 +59,8 @@ function NavBar(props) {
       ${'' /* border: 1px solid red; */}
 
       width: 100%;
+
+      overflow: hidden;
 
       display: flex;
       flex-direction: row;
@@ -291,7 +294,7 @@ function NavBar(props) {
             </form>
           </div>
         :
-          <div></div>
+          <></>
         }
       </div>
     </div>
