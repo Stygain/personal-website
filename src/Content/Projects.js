@@ -18,16 +18,6 @@ const ProjectData = [
     ]
   },
   {
-    title: "CSS-Loaders",
-    link: "https://stygain.github.io/css-loaders/",
-    source: "https://github.com/Stygain/css-loaders",
-    description: <p className="project-description">Got an itch to watch some CSS animations? Check out my <a href="https://stygain.github.io/css-loaders/" target="_blank" rel="noopener noreferrer">CSS-Loaders website</a> with heavy inspiration from <a href="https://tobiasahlin.com/spinkit/" target="_blank" rel="noopener noreferrer">Tobias Ahlin's Spinkit.</a> I love watching loading animations (when the loading animation is nice), so it was fun to create some of my own.</p>,
-    technologies: [
-      "React",
-      "CSS",
-    ]
-  },
-  {
     title: "Northwest Vision",
     link: "https://stygain.github.io/northwestvision/",
     source: "https://github.com/Stygain/northwestvision",
@@ -48,6 +38,26 @@ const ProjectData = [
     ]
   },
   {
+    title: "CSS-Loaders",
+    link: "https://stygain.github.io/css-loaders/",
+    source: "https://github.com/Stygain/css-loaders",
+    description: <p className="project-description">Got an itch to watch some CSS animations? Check out my <a href="https://stygain.github.io/css-loaders/" target="_blank" rel="noopener noreferrer">CSS-Loaders website</a> with heavy inspiration from <a href="https://tobiasahlin.com/spinkit/" target="_blank" rel="noopener noreferrer">Tobias Ahlin's Spinkit.</a> I love watching loading animations (when the loading animation is nice), so it was fun to create some of my own.</p>,
+    technologies: [
+      "React",
+      "CSS",
+    ]
+  },
+  {
+    title: "Push Buttons",
+    link: "https://stygain.github.io/push-buttons/",
+    source: "https://stygain.github.io/push-buttons/",
+    description: <p className="project-description">I hope you liked my css animations, but how about some interaction? My <a href="https://stygain.github.io/push-buttons/" target="_blank" rel="noopener noreferrer">Push Buttons website</a> provides just the satisfaction you desire! Buttons are just as fun to create as loading animations, with one of the designs used on this website.</p>,
+    technologies: [
+      "React",
+      "CSS",
+    ]
+  },
+  {
     title: "Fan-Controller",
     link: null,
     source: "https://github.com/Stygain/fan-controller",
@@ -55,6 +65,16 @@ const ProjectData = [
     technologies: [
       "Python",
       "Load Balancing",
+    ]
+  },
+  {
+    title: "Personal Website",
+    link: null,
+    source: "https://github.com/Stygain/personal-website",
+    description: <p className="project-description">This is the source of the website you are looking at right now. Styling for this website was inspired by <a href="https://brittanychiang.com/" target="_blank" rel="noopener noreferrer">Brittany Chiang's website.</a></p>,
+    technologies: [
+      "React",
+      "CSS",
     ]
   },
 ]
