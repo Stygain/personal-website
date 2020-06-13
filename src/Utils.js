@@ -3,7 +3,7 @@ import { jsx, css } from '@emotion/core';
 
 export function ContentMargin(props) {
   const styling = css`
-    ${'' /* border: 1px solid red; */}
+    ${'' /* border: 1px solid black; */}
 
     position: relative;
     ${'' /* margin-left: 70px; */}
@@ -14,7 +14,7 @@ export function ContentMargin(props) {
     margin-bottom: 10vh;
 
     @media (min-width: 1300px) {
-      max-width: 1000px;
+      max-width: 1150px;
     }
 
     @media (max-width: 800px) {

@@ -60,8 +60,6 @@ function NavBar(props) {
 
       width: 100%;
 
-      overflow: hidden;
-
       display: flex;
       flex-direction: row;
       align-items: baseline;
@@ -69,8 +67,6 @@ function NavBar(props) {
       z-index: 2;
 
       background-color: rgb(0, 58, 83);
-
-      overflow-y: scroll;
 
       transition: all 0.5s ease;
     }
