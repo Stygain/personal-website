@@ -62,7 +62,7 @@ function Personal(props) {
       <div className="personal content-container">
         <div className="about-text-container">
           <p>I am a software engineer from Portland, Oregon who enjoys creating things of all kinds, whether that be software, woodworking, computers, or more! I am a recent graduate of <a href="https://oregonstate.edu/" target="_blank" rel="noopener noreferrer">Oregon State University</a> where I received a BS in Computer Science with a focus in security.</p>
-          <p>After graduating Oregon State I joined the Windows endpoint team at <a href="https://www.carbonblack.com/" target="_blank" rel="noopener noreferrer">VMware Carbon Black</a> where I get to work on core functionality of antivirus software.</p>
+          <p>After graduating Oregon State I joined the Windows endpoint team at <a href="https://www.carbonblack.com/" target="_blank" rel="noopener noreferrer">VMware Carbon Black</a> where I get to work with some amazing engineers on antivirus software for Windows.</p>
         </div>
         <ImageContainer />
       </div>
