@@ -97,8 +97,8 @@ function NavItem(props) {
           <BlinkyBox hover={hover}/>
         </a>
         :
-        <>
-        </>
+        <React.Fragment>
+        </React.Fragment>
       }
     </div>
   );

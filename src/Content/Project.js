@@ -159,7 +159,7 @@ function Project(props) {
   return (
     <div css={styling}>
       <div className="project-content">
-        {props.content.link !== null ? <a className="ext-link" href={props.content.link} target="_blank" rel="noopener noreferrer"><img className="ext-img" src={ExternalLink} alt="External link" /></a> : <></>}
+        {props.content.link !== null ? <a className="ext-link" href={props.content.link} target="_blank" rel="noopener noreferrer"><img className="ext-img" src={ExternalLink} alt="External link" /></a> : <React.Fragment></React.Fragment>}
         <div className="project-text-content">
           <div className="title-content-wrap">
             <h2>{props.content.title}</h2>

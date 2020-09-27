@@ -290,7 +290,7 @@ function NavBar(props) {
             </form>
           </div>
         :
-          <></>
+          <React.Fragment></React.Fragment>
         }
       </div>
     </div>
