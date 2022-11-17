@@ -33,7 +33,6 @@ function Personal(props) {
       ${'' /* border: 1px solid green; */}
 
       width: 40%;
-      max-width: calc(100% - (38vw - 3px + 25px));
     }
 
     p {
