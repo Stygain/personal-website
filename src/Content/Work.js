@@ -10,6 +10,33 @@ import TechContent from './TechContent.js';
 
 const WorkData = [
   {
+    company: "VMware Carbon Black",
+    companylink: "https://www.carbonblack.com/",
+    position: "Software Engineer",
+    location: "Hillsboro, Oregon",
+    start: "June 2020",
+    end: "Present",
+    description: [
+      "Upgraded existing Windows development toolchains from Visual Studio 2017 to 2019 (including SDK upgrades) and included some implementation internally of Visual Studio 2022",
+      "Upgraded kernel driver components from WDK8.0 to WDK10.0",
+      "Cross-compiled existing binaries for multiple platforms (ARM32, ARM64, ARM64EC, ARM64X)",
+      "Maintained and further parallelized existing Jenkins build-infrastructure",
+      "Utilized conan and jenkins to upgrade, maintain, and migrate thirdparty components to reduce vulnerabilities and potential crashes of the Windows sensor",
+      "Debugged both usermode and kernelmode components through WinDbg",
+      "Implemented new feature-sets using C++ and Windows APIs to improve security efficacy",
+      "Supported internal devops teams in converting existing infrastructure from VMs to containers",
+    ],
+    techAndTools: [
+      "C++",
+      "WinDbg",
+      "Python3",
+      "MSBuild",
+      "Jenkins",
+      "Git",
+      "SVN",
+    ]
+  },
+  {
     company: "Carbon Black",
     companylink: "https://www.carbonblack.com/",
     position: "Software Engineering Intern (MECOP)",
@@ -17,7 +44,7 @@ const WorkData = [
     start: "June 2019",
     end: "December 2019",
     description: [
-      "Organized and executed on a major build upgrade in order to improve code compilation time, enable use of spectre mitigation, and support the ARM64 architecture: Visual Studio 2015 -> 2017, Python2 -> Python3",
+      "Organized and executed on a major build upgrade in order to improve code compilation time, enable use of spectre mitigation, and support the ARM64 architecture: Visual Studio 2015 -> 2017 -> 2019, Python2 -> Python3",
       "Added the ARM64 architecture to all parts of the Windows Sensor software stack including recompiling third party software for ARM64",
       "Implemented ARM64 cross-compilation build toolchains in Jenkins automation",
       "Refactored Jenkins builds in order to reduce build time and remove unnecessary re-builds",
