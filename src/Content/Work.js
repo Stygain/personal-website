@@ -10,10 +10,10 @@ import TechContent from './TechContent.js';
 
 const WorkData = [
   {
-    company: "VMware Carbon Black",
+    company: "Carbon Black by Broadcom",
     companylink: "https://www.carbonblack.com/",
     position: "Software Engineer",
-    location: "Hillsboro, Oregon",
+    location: "Remote",
     start: "June 2020",
     end: "Present",
     description: [
@@ -95,7 +95,6 @@ const WorkData = [
     ],
     techAndTools: [
       "C++",
-      "Haskell",
     ]
   }
 ]

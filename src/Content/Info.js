@@ -78,8 +78,8 @@ function Info(props) {
       <h4 className="name-intro">Hi, my name is</h4>
       <h2 className="name">Adam Barton</h2>
       <h4 className="occupation-intro">and I am a</h4>
-      <h3 className="occupation">Software Engineer at <a href="https://www.carbonblack.com/" target="_blank" rel="noopener noreferrer">Carbon Black (VMware)</a></h3>
-      <p>I'm a software engineer from Portland, Oregon who enjoys building things of all kinds!</p>
+      <h3 className="occupation">Software Engineer at <s>Carbon Black</s> <s>VMware Carbon Black</s> <a href="https://www.carbonblack.com/" target="_blank" rel="noopener noreferrer">Carbon Black by Broadcom</a></h3>
+      <p>I'm a software engineer living in Chicago, Illinois who enjoys building things of all kinds!</p>
     </div>
   );
 }
