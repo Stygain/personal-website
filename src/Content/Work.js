@@ -25,11 +25,16 @@ const WorkData = [
       "Debugged both usermode and kernelmode components through WinDbg",
       "Implemented new feature-sets using C++ and Windows APIs to improve security efficacy",
       "Supported internal devops teams in converting existing infrastructure from VMs to containers",
+      "Built internal automated documentation pipelines utilizing python with git, confluence, and github/gitlab APIs. These are used to track deployments internally and replace manual methods implemented previously.",
+      "Migrated existing development processes from SVN to git",
+      "Migrated gitlab pipelines to github actions",
+      "Designed and implemented an extensible linter for an internal language",
+      "Upgraded numerous thirdparty components",
     ],
     techAndTools: [
       "C++",
       "WinDbg",
-      "Python3",
+      "Python",
       "MSBuild",
       "Jenkins",
       "Git",
@@ -77,7 +82,7 @@ const WorkData = [
     techAndTools: [
       "TCL/TK",
       "Perl",
-      "Python3",
+      "Python",
       "SVN",
     ]
   },
